@@ -1,8 +1,7 @@
-const contactPage = document.getElementById('contact'),
-      sendBtn = document.getElementById('send-button'),
+const sendBtn = document.getElementById('send-button'),
       loader = document.getElementById('loader'),
       textarea = document.getElementById('hold-textarea'),
-      homeNav = document.getElementById('home-nav');
+      addEmail = document.getElementById('addHyphen');
 
 
 sendBtn.addEventListener('click', () => {
@@ -20,4 +19,8 @@ textarea.addEventListener('click', () => {
     textarea.style.height = '100px';
 });
 
-
+function addHyphen() {
+    if (addEmail.value != "") {
+        addEmail.value = addEmail.value + "-";
+    }
+  }

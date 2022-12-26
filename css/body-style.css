@@ -80,7 +80,19 @@ body {
 	object-fit: cover;
 	opacity: 1;
 	transition: all .2s;
+	animation: fadeIn-video 2.2s ease-out;
 }
+@keyframes fadeIn-video{
+	0%{
+	  opacity:0;
+	}
+	70%{
+	  opacity:0;
+	}
+	100%{
+	  opacity:1;
+	 }
+ }
 /* ------------------------------------------------------------------------------------------------------------------------- */
 /* custom scrollbar */
 html::-webkit-scrollbar {

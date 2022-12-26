@@ -11,6 +11,33 @@
 	user-select: none;
 }
 
+.page-loading{
+  position: absolute;
+  top: 50%;   left: 50%;
+  transform: translate(-50%,-50%);
+  width: 20%;  height: 2px; 
+   overflow: hidden;
+}
+.page-loading span{
+ opacity:0;
+   position: absolute;
+   top: 0;   left: 0;
+   width: 100%;  height: 100%;
+   background: #fff;
+   display: inline-block;
+   animation: animate 1.5s 1 linear;
+}
+@keyframes animate{
+   0%{
+     opacity:1;
+      transform: translateX(-100%);
+   }
+   100%{
+     opacity:1;
+       transform: translateX(100%);
+    }
+}
+
 .first-page {
   /* border: 2px solid #fff; */
   display: flex;
@@ -26,10 +53,14 @@
   font-size: 6rem;
   font-weight: 900;
   letter-spacing: .8rem;
-  animation: h1-fade-in 1s ease-out;
+  animation: h1-fade-in 3.2s ease-out;
  }
  @keyframes h1-fade-in{ 
   0%{
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  60%{
       opacity: 0;
       transform: translateY(-50px);
   }
@@ -43,23 +74,21 @@
   font-size: 2rem;
   color: rgba(255, 255 , 255, .4);
  }
+ /* hello */
  .first-page span:nth-of-type(1) {
-  animation: hello-fade-in 1s ease-out;
+  animation: hello-fade-in 3.2s ease-out;
  } 
+ /* web developer */
  .first-page span:nth-of-type(2) {
-  display: none;
   margin-bottom: 5rem;
- } 
- .first-page span:nth-of-type(3) {
-  margin-bottom: 5rem;
-  animation: web-fade-in 1.2s ease-out;
+  animation: web-fade-in 3.4s ease-out;
 
  } 
  @keyframes hello-fade-in{ 
   0%{
       opacity: 0;
   }
-  20%{
+  80%{
       opacity: 0;
   }
   100%{
@@ -70,7 +99,7 @@
   0%{
       opacity: 0;
   }
-  50%{
+  70%{
       opacity: 0;
   }
   100%{
@@ -96,7 +125,7 @@
   -webkit-text-fill-color: transparent;
   position: relative;
   pointer-events: auto;
-  animation: button-fade-in 1.5s ease-out;
+  animation: button-fade-in 3.7s ease-out;
 
   color: #f9f9f9; /*For IE*/
 }
@@ -106,7 +135,7 @@
       opacity: 0;
       pointer-events: none;
   }
-  50%{
+  70%{
       opacity: 0;
       transform: translateY(50px);
       pointer-events: none;
@@ -145,6 +174,8 @@
 @media screen and (max-width: 545px) {
   .first-page span {
     font-size: 1.5rem;
+    margin-top: .6rem;
+    margin-bottom: .6rem;
    } 
 }
 @media screen and (max-width: 476px) {
@@ -155,12 +186,11 @@
     font-size: 4.5rem;
     letter-spacing: .5rem;
   }
+}
+@media screen and (max-width: 330px) {
   .first-page span:nth-of-type(2) {
-    display:block;
-  }
-  .first-page span:nth-of-type(3) {
-    display: none;
-  } 
+    font-size: 1.2rem;
+   } 
 }
 
 @media screen and (max-width: 768px) {
@@ -188,6 +218,7 @@
 @media screen and (max-width: 345px) {
   .button-49,
   .button-49:after{
+    letter-spacing: 0;
     width: 120px;
   }
 } 

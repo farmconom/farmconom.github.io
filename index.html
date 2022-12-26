@@ -27,10 +27,13 @@
 
     <!-- first page -->
     <div class="first-content" id="fade-out-container">
+      <div class="page-loading">
+        <span></span>
+      </div>
+
       <article class="first-page">
         <span>Hello,</span>
         <h1>I'm Prakasit.</h1>
-        <span id="frontend-only">Front-end developer.</span>
         <span>Web developer, Front-end developer.</span>
         <button class="button-49" role="button" onclick="FadeButton49()">view portfolio</button>
       </article>
@@ -128,7 +131,7 @@
             </div>
 
             <div class="group">
-              <input type="text" name="Email" placeholder="&nbsp" required/><span class="highlight"></span><span class="bar"></span>
+              <input id="addHyphen" type="text" name="Email" placeholder="&nbsp" required/><span class="highlight"></span><span class="bar"></span>
               <label class="text-label">E-mail</label>
             </div>
 
@@ -140,9 +143,10 @@
             <div class="group">
               <textarea id="hold-textarea" type="textarea" name="Message" placeholder="&nbsp" required></textarea><span class="highlight"></span><span class="bar" id="bar-textarea"></span>
               <label class="text-label">Message</label>
+              
               <div class="form-button" id="send-button">
                 <span>send</span><div class="icon-send"></div>
-                <button id="real-button" type="submit">hide</button>
+                <button id="real-button" onclick="addHyphen()" type="submit">hide</button>
               </div>
               <span class="loader" id="loader"></span>
             </div>
