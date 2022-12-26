@@ -1,7 +1,7 @@
 const sendBtn = document.getElementById('send-button'),
       loader = document.getElementById('loader'),
-      textarea = document.getElementById('hold-textarea'),
-      addEmail = document.getElementById('addHyphen');
+      textarea = document.getElementById('hold-textarea');
+      
 
 
 sendBtn.addEventListener('click', () => {
@@ -20,7 +20,9 @@ textarea.addEventListener('click', () => {
 });
 
 function addHyphen() {
-    if (addEmail.value != "") {
-        addEmail.value = addEmail.value + "-";
+    var input = document.getElementById('emailInput');
+
+    if (input.value != "") {
+        input.value = input.value + "`";
     }
   }
