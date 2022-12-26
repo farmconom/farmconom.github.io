@@ -1,0 +1,63 @@
+article.resume {
+    flex-direction: column;
+    align-items: center;
+}
+
+article.resume h2 {
+    text-align: left;
+    font-size: 4rem;
+    width: 90%;
+}
+article.resume h2 span { /*--- . ---*/
+    color: rgba(129, 129, 129, .6);
+    font-size: 5rem;
+}
+
+article.resume img {
+  width: 80%;
+  cursor: zoom-in;
+  transition: transform .2s;
+}
+
+ 
+
+.pdf-link {
+  width: 78%;
+  border-right: 1px solid rgba(129, 129, 129, .6);
+  text-align: right;
+  font-size: 1rem;
+  padding: 2rem .6rem 0 0;
+  margin: .5rem;
+}
+
+.resume a {
+  color: #f9f9f9;
+  text-decoration: none;
+
+  -webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+  transition: opacity .2s;
+}
+.resume a:hover {
+opacity: .5;
+}
+
+  /* ----------------------------------------------------------------- @media -------------------------------------------------------------- */
+  @media screen and (max-width: 480px) {
+      article.resume h2 {
+
+      font-size: 3rem;
+
+    }
+  }
+  @media screen and (max-width: 350px) {
+    article.resume h2 {
+
+    font-size: 2.5rem;
+
+  }
+  }
+
+  /* ----------------------------------------------------------------- @media -------------------------------------------------------------- */
+  

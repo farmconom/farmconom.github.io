@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prakasit | Front-end developer</title>
+
+    <link rel="icon" type="image/x-icon" href="./images/logo-PL.png">
+
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="./css/body-style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/first-page.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main-page.css" />
+    <link rel="stylesheet" type="text/css" href="./css/content-inner/1-home.css" />
+    <link rel="stylesheet" type="text/css" href="./css/content-inner/2-about.css" />
+    <link rel="stylesheet" type="text/css" href="./css/content-inner/3-projects.css" />
+    <link rel="stylesheet" type="text/css" href="./css/content-inner/4-resume.css" />
+    <link rel="stylesheet" type="text/css" href="./css/content-inner/5-contact.css" />
+    <link rel="stylesheet" type="text/css" href="./css/hamburgur-menu.css" />
+  </head>
+
+  <body>
+    <video id="background-loop" autoplay loop muted width="100%" height="100%">
+      <source src="./video/background-video.mov" type="video/mp4" />
+    </video>
+
+    <!-- first page -->
+    <div class="first-content" id="fade-out-container">
+      <article class="first-page">
+        <span>Hello,</span>
+        <h1>I'm Prakasit.</h1>
+        <span id="frontend-only">Front-end developer.</span>
+        <span>Web developer, Front-end developer.</span>
+        <button class="button-49" role="button" onclick="FadeButton49()">view portfolio</button>
+      </article>
+    </div>
+
+    <!-- main page -->
+<!-- header -->
+    <header id="fade-in-header">
+      <input id="tab-1" type="radio" name="group" />
+      <input id="tab-free" type="radio"/>
+      <input id="tab-2" type="radio" name="group" />
+      <input id="tab-3" type="radio" name="group" />
+      <input id="tab-4" type="radio" name="group" />
+      <input id="tab-5" type="radio" name="group" />
+      
+      <nav class="buttons" id="nav-buttons">
+        <label id="click-home" for="tab-1"><img src="./images/logo-PL.png" alt="logo-PL">.</label>
+        <div></div>        <!-- to make free space between ham-menu -->
+        <label id="click-about" for="tab-2"> About </label>
+        <label id="click-projects" for="tab-3"> Projects </label>
+        <label id="click-resume" for="tab-4"> Resume </label>
+        <label id="click-contact" for="tab-5"> Contact </label>
+      </nav>
+      <div id="nav-underline"></div>
+      
+      <div class="ham-menu not-active" id="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+<!-- main -->
+    <main class="main-content" id="fade-in-container">      
+      <section class="content-inner">
+        <!-- home -->
+        <article class="home" id="home">
+          <h2><span>#</span>Welcome</h2>
+          <div id="left-line"></div>
+            <p>Hi, I'm so happy that you visited my web portfolio. This is the first website I created, and there will be many other works to follow. I hopefully you will enjoy my work</p>        
+            <p>You can click the label below, to see the other pages. </p>
+              <ul id="home-nav">
+                <li><span onclick="about_button_click()">About me</span></li>
+                <li><span onclick="projects_button_click()">My works</span></li>
+                <li><span onclick="resume_button_click()">My resume</span></li>
+                <li><span onclick="contact_button_click()">Contact me</span></li>
+              </ul>      
+        </article>
+
+        <!-- about -->
+        <article class="about" id="about">
+          <div class="img-and-caption">
+            <figure class="fade-img">
+              <img id="profile-img-bottom" src="./images/profile.jpg" alt="profile-img">
+              <img id="profile-img-top" onclick="toggle()" src="./images/profile-art.jpg" alt="profile-art">
+            </figure>
+            
+            <div class="about-caption">
+              <h2><span>::</span>About Me</h2>
+              <p>&emsp;&emsp;&emsp;My name is Prakasit Lertprakitsin. I'm born and live in Thailand. I've been interested in computers since I was a kid, that led me to enter a vocational college. I learned basic coding skill from Hatyai Technical College. they teach me about microcontroller and when I graduated I'm also interested in website development.<br/><br/>&emsp;&emsp;&emsp;That made me learn many things that I never did when I was in college. I spend most of my time to creating my work. to develop myself and this website is one of them.</p>
+              <h4>This is my skill</h4>
+              <ul>
+                <li><span>HTML</span></li>
+                <li><span>CSS</span></li>
+                <li><span>JavaScript</span></li>
+                <li><span>Photoshop</span></li>
+              </ul>
+              <p>I still learning new skills every day. and develop myself to be better than before.</p>
+            </div>
+          </div>
+        </article>
+        
+        <!-- projects -->
+        <article class="projects" id="projects">
+            <h2 class="loader-shine">COMING SOON</h2>
+        </article>
+        
+        <!-- resume -->
+        <article class="resume" id="resume">
+          <h2><span>.</span>Resume</h2>
+
+          <img src="./images/resume.jpg" alt="resume-img" id="zoomImg" onclick="zoomIn(event)">
+  
+          <div class="pdf-link">
+          <a href="./images/resume.PDF" download="resume.pdf">Click to download PDF file.</a>
+          </div>
+        </article>
+        
+        <!-- contact -->
+        <article class="contact" id="contact">
+           <h2><span>&#60;</span>Contact Me<span>&#62;</span></h2>
+           <form action="https://formsubmit.co/e0253c80f9a803a0d9972ae1fb4cb069" method="post">
+            <div class="group">
+              <input type="text" name="Name" placeholder="&nbsp" required/><span class="highlight"></span><span class="bar"></span>
+              <label class="text-label">Full Name</label>
+            </div>
+
+            <div class="group">
+              <input type="text" name="Email" placeholder="&nbsp" required/><span class="highlight"></span><span class="bar"></span>
+              <label class="text-label">E-mail</label>
+            </div>
+
+            <div class="group">
+              <input type="text" name="Subject" placeholder="&nbsp" required/><span class="highlight"></span><span class="bar"></span>
+              <label class="text-label">Subject</label>
+            </div>
+
+            <div class="group">
+              <textarea id="hold-textarea" type="textarea" name="Message" placeholder="&nbsp" required></textarea><span class="highlight"></span><span class="bar" id="bar-textarea"></span>
+              <label class="text-label">Message</label>
+              <div class="form-button" id="send-button">
+                <span>send</span><div class="icon-send"></div>
+                <button id="real-button" type="submit">hide</button>
+              </div>
+              <span class="loader" id="loader"></span>
+            </div>
+
+           </form>
+        </article>
+      </section>
+
+    <footer id="footer">
+      <div>
+      <span>Copyright © 2022 Prakasit Lertprakitsin</span>
+      </div>
+    </footer>
+    <footer id="footer-contact">
+      <div>
+      <span>Tel. 080-5410801 &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; farmconom@gmail.com</span>
+      </div>
+    </footer>
+    </main>
+
+    <!-- js file -->
+    <script src="./js/botton49.js"></script>
+    <script src="./js/main-buttons-event.js"></script>
+    <script src="./js/nav-buttons-event.js"></script>
+    <script src="./js/about-img-hover.js"></script>
+    <script src="./js/contact-submit-buttuon.js"></script>
+    <script src="./js/ham-menu-event.js"></script>
+    <script src="./js/zoom-img-resume.js"></script>
+  </body>
+</html>

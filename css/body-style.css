@@ -1,0 +1,104 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-----------------------------------------------------------------------CSS Reset-----------------------------------------------------------------------*/
+
+@font-face {
+  font-family: Rubik-Regular;
+  src: url(../fonts/Rubik-Regular.woff);
+}
+
+#detach-button-host {
+    display: none !important;
+}
+
+html,
+body{
+  height: 100%;
+  width: 100%;
+  font-size: calc(60% + 0.8vmin);
+  overflow: hidden;
+  
+}
+
+
+body {
+	font-family: Rubik-Regular;
+	color: #eee;
+	background-color: #020207;
+}
+
+#background-loop {
+	z-index: -1;
+	position: fixed;
+	object-fit: cover;
+	opacity: 1;
+	transition: all .2s;
+}
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* custom scrollbar */
+html::-webkit-scrollbar {
+	width: 10px;
+}
+  
+html::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+  
+html::-webkit-scrollbar-thumb {
+	background-color: #d6dee1;
+	border-radius: 20px;
+	border: 6px solid transparent;
+	background-clip: content-box;
+}
+  
+html::-webkit-scrollbar-thumb:hover {
+	background-color: #a8bbbf;
+  }
+
