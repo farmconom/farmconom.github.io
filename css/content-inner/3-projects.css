@@ -1,61 +1,133 @@
 article.projects {
-    justify-content: center;
-    align-items: center;
+  flex-direction: column;
+    justify-content: flex-start;
 }
 
-.loader-shine {
-    color: #fff;
-    background: linear-gradient(to right, #4d4d4d 0, #fff 10%, #4d4d4d 20%);
-    background-position: 0;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shine 3s infinite linear;
-    animation-fill-mode: forwards;
-    -webkit-text-size-adjust: none;
-    letter-spacing: 1rem;
-    font-size: 2rem;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  @-moz-keyframes shine {
-    0% {
-      background-position: 0;
-    }
-    100% {
-      background-position: 420px;
-    }
-  }
-  @-webkit-keyframes shine {
-    0% {
-      background-position: 0;
-    }
-    100% {
-      background-position: 420px;
-    }
-  }
-  @-o-keyframes shine {
-    0% {
-      background-position: 0;
-    }
-    100% {
-      background-position: 420px;
-    }
-  }
-  @keyframes shine {
-    0% {
-      background-position: 0;
-    }
-    100% {
-      background-position: 420px;
-    }
-  }
+article.projects > div {
+  margin-bottom: 2rem;
+}
+article.projects h2 {
+  display: flex;
+  text-align: left;
+  font-size: 4rem;
+}
+article.projects h2 span { /*--- (); ---*/
+  color: rgba(129, 129, 129, .6);
+  font-size: 4rem;
+}
+article.projects h2 span:nth-child(1) { /*--- (); ---*/
+  margin: .3em .2em 0 0;
+  font-size: 2rem;
+}
+
+/* img */
+article.projects figure {
+  display: flex;
+  width: 100%;
+  gap: 1.5rem;
+}
+article.projects figure img {
+  border-radius: 10px;
+}
+
+article.projects > span {
+  border-top: 1px solid #fff;
+  margin-top: 1rem;
+  padding-top: .2rem;
+  width: 100%;
+  text-align: right;
+  text-transform: uppercase;
+
+  -webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+/* hover img */
+.content {
+  position: relative;
+  width: 30%;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+
+.fadeIn-top{
+  top: 20%;
+}
+
+.fadeIn-left{
+  left: 20%;
+}
+
+.fadeIn-right{
+  left: 80%;
+}
+
 /* ----------------------------------------------------------------- @media -------------------------------------------------------------- */
 @media screen and (max-width: 400px) {
-  .loader-shine {
-    font-size: 1.5rem;
-   } 
+
 }
 /* ----------------------------------------------------------------- @media -------------------------------------------------------------- */
   
