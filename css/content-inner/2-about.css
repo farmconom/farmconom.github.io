@@ -83,9 +83,10 @@ article.about figure img {
     font-size: 1.5rem;
 }
 .about-caption ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
     list-style-position: inside;
     list-style: none;
     margin:0 4rem 0 4rem;
@@ -97,7 +98,7 @@ article.about figure img {
     font-size: 2rem;
     font-weight: bold;
     display: inline-block; 
-    width: 1.5rem;
+    width: 1.2rem;
     transform: translate(1px, 5px);
   }
 
@@ -113,7 +114,6 @@ article.about figure img {
         width: 60%;
     }
     .about-caption ul {
-        margin:0 0 0 4rem;
         font-size: 1rem;
     }
   }
@@ -146,15 +146,13 @@ article.about figure img {
         font-size: 3rem;
       }
   }
-@media screen and (max-width: 338px) {
+@media screen and (max-width: 394px) {
     .about-caption h2 {
         font-size: 3rem;
       }
     .about-caption ul {
         font-size: 1.1rem;
-        height: 80px;
-        flex-direction: column;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
       }
 }
   /* ----------------------------------------------------------------- @media -------------------------------------------------------------- */

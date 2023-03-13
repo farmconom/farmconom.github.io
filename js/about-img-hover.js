@@ -1,6 +1,5 @@
 const profile_img_bottom = document.getElementById('profile-img-bottom');
 const profile_img_top = document.getElementById('profile-img-top');
-let isOn = true;
 
 profile_img_top.addEventListener('mouseenter', () => {
     img_top_fade();
@@ -10,15 +9,6 @@ profile_img_top.addEventListener('mouseleave', () => {
     img_bottom_fade();
 });
 
-
-function toggle() {
-  isOn = !isOn;
-  if (isOn) {
-    img_bottom_fade();
-  } else {
-    img_top_fade();
-  }
-}
 
 
 //----------------------------------------------------------------------------------------------------------------------------------
