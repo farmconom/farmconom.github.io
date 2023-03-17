@@ -73,6 +73,21 @@ body {
 	color: #eee;
 	background-color: #020207;
 }
+/* preload images */
+body::before {
+	content: url(../../images/agency-img.jpg)
+			 url(../../images/bnw-img.jpg)
+			 url(../../images/dropbeat-img.jpg)
+			 url(../../images/icon-PL.png)
+			 url(../../images/logo-PL.png)
+			 url(../../images/poster-video.jpg)
+			 url(../../images/profile-art.jpg)
+			 url(../../images/profile.jpg)
+			 url(../../images/resume.jpg)
+			 url(../../images/twitter-card.jpg);
+
+	display: none; 
+}
 
 #background-loop {
 	z-index: -1;
