@@ -13,8 +13,3 @@ images.forEach((image) => {
   const img = new Image();
   img.src = image;
 });
-
-//preload video
-const video = document.createElement('video');
-video.src = '../video/background-video.mov';
-video.preload = 'auto';
