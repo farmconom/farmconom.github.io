@@ -75,16 +75,17 @@ body {
 }
 /* preload images */
 body::before {
-	content: url(../../images/agency-img.jpg)
-			 url(../../images/bnw-img.jpg)
-			 url(../../images/dropbeat-img.jpg)
-			 url(../../images/icon-PL.png)
-			 url(../../images/logo-PL.png)
-			 url(../../images/poster-video.jpg)
-			 url(../../images/profile-art.jpg)
-			 url(../../images/profile.jpg)
-			 url(../../images/resume.jpg)
-			 url(../../images/twitter-card.jpg);
+	content: url(../images/agency-img.jpg)
+			 url(../images/bnw-img.jpg)
+			 url(../images/dropbeat-img.jpg)
+			 url(../images/icon-PL.png)
+			 url(../images/logo-PL.png)
+			 url(../images/poster-video.jpg)
+			 url(../images/profile-art.jpg)
+			 url(../images/profile.jpg)
+			 url(../images/resume.jpg)
+			 url(../images/twitter-card.jpg)
+			 url(../video/background-video.mov);
 
 	display: none; 
 }
