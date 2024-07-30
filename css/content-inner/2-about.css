@@ -84,13 +84,14 @@ article.about figure img {
 }
 .about-caption ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(129px, 1fr));
     grid-column-gap: .5rem;
     grid-row-gap: .5rem;
     list-style-position: inside;
     list-style: none;
     margin:0 4rem 0 4rem;
     font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 .about-caption ul li::before { /* bullet color */
     content: "\2022";
@@ -100,7 +101,12 @@ article.about figure img {
     display: inline-block; 
     width: 1.2rem;
     transform: translate(1px, 5px);
+    transition: all 150ms ease-in-out;
   }
+
+.about-caption ul li:hover::before {
+    color: #4CFFC3;
+}
 
   /* ----------------------------------------------------------------- @media -------------------------------------------------------------- */
 @media screen and (max-width: 996px) {
